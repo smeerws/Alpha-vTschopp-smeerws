@@ -200,7 +200,7 @@ GameObject:
   - component: {fileID: 1029464378}
   - component: {fileID: 1029464377}
   m_Layer: 0
-  m_Name: mep_alpha_sprites_player_256x256
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
