@@ -4,13 +4,38 @@ using UnityEngine;
 
 public class BuildWorld : MonoBehaviour {
 
+    public GameObject obstacle;
+
+    private float timer;
+    private int offsetCounter = 12;
+    private int offsetDistance = 4; // Place obstacles in x units
+
 	// Use this for initialization
-	void Start () {
-		
+	void Start ()
+    {
+        Debug.Log("'BuildWorld.cs' initialized.");
+        CreateWorld(offsetCounter);
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+    // Create world
+    void CreateWorld(int offset)
+    {
+        for (int i = 0; i < 20; i++)
+        {
+            Instantiate(obstacle, new Vector2(offset, (i * 2) + Random.Range(0, 4) - 20), Quaternion.identity, transform);
+        }
+    }
+
+    // Update is called once per frame
+    void Update ()
+    {
+        timer += Time.deltaTime;
+
+        if (timer > GlobalVariables.speed)
+        {
+            offsetCounter = offsetCounter + offsetDistance;
+            CreateWorld(offsetCounter);
+            timer = timer - GlobalVariables.speed;
+        }
+    }
 }

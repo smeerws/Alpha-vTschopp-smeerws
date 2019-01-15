@@ -6,8 +6,9 @@ using UnityEngine.SceneManagement;
 public class Buttons : MonoBehaviour {
 
 	// Use this for initialization
-	void Start () {
-
+	void Start ()
+    {
+        Debug.Log("'Buttons.cs' initialized.");
 	}
 
     // Button functionality
@@ -31,7 +32,8 @@ public class Buttons : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update () {
+    void Update ()
+    {
 		
 	}
 }
