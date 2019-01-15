@@ -14,11 +14,11 @@ public class Controls : MonoBehaviour {
     {
         transform.Translate(Vector2.right * Time.deltaTime * GlobalVariables.speed);
 
-        if (Input.GetKey("w"))
+        if (Input.GetKey("w") || Input.GetKey("up"))
         {
             transform.Translate(Vector2.up * Time.deltaTime * GlobalVariables.speed * 2);
         }
-        if (Input.GetKey("s"))
+        if (Input.GetKey("s") || Input.GetKey("down"))
         {
             transform.Translate(Vector2.down * Time.deltaTime * GlobalVariables.speed * 2);
         }
