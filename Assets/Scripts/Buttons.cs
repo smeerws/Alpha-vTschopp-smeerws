@@ -5,27 +5,23 @@ using UnityEngine.UI;
 
 public class Buttons : MonoBehaviour {
 
-    public Button StartButton, AgainButton, EndButton;
-
 	// Use this for initialization
 	void Start () {
-        // Add listeners to buttons
-        StartButton.onClick.AddListener(StartGame);
-        AgainButton.onClick.AddListener(TryAgain);
-        EndButton.onClick.AddListener(EndGame);
+
 	}
 
-    void StartGame ()
+    // Button functionality
+    public void StartGame ()
     {
         Debug.Log("'Start button' pressed, 'StartGame' triggered.");
     }
 
-    void TryAgain()
+    public void TryAgain()
     {
-        Debug.Log("'Again button' pressed, TryAgain triggered.");
+        Debug.Log("'Again button' pressed, 'TryAgain' triggered.");
     }
 
-    void EndGame()
+    public void EndGame()
     {
         Debug.Log("'End button' pressed, 'EndGame' triggered.");
         Debug.Log("Avengers assemble!");
