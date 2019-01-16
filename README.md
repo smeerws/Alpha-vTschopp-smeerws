@@ -15,7 +15,7 @@ Alpha is a game developed with Unity and build for desktop and WebGL. Goal of th
 * Build for desktop and WebGL
 
 ## Resources
-* None
+* [Orbitron (Font)](https://fonts.google.com/specimen/Orbitron)
 
 ## Screenshots
 ![Concept](./Screenshots/alpha_concept_screenshot.jpg)
