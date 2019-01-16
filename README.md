@@ -1,3 +1,11 @@
+# Progress
+60% done.
+* [x] User interface
+* [x] Generate world (random)
+* [x] Move world (not yet limited)
+* [ ] Add stopwatch
+* [ ] Player behavior
+
 # What is Alpha?
 Alpha is a game developed with Unity and build for desktop and WebGL. Goal of the game is to avoid collision with moving obstacles, entering the screen from right to left. Instead of controlling the character, the user moves the background up and down to avoid collisions.
 
