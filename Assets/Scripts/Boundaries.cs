@@ -13,6 +13,9 @@ public class Boundaries : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+        float copyAxis = parent.transform.position.x;
+        Vector2 position = new Vector2(copyAxis, transform.position.y);
+
+        transform.position = position;
 	}
 }

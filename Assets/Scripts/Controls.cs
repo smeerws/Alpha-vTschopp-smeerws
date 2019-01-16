@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Controls : MonoBehaviour {
 
-    private float cameraLimit = 10; // Set limits for camera movement along y
-
     // Use this for initialization
     void Start () {
 		
@@ -18,14 +16,14 @@ public class Controls : MonoBehaviour {
 
         if (Input.GetKey("w") || Input.GetKey("up"))
         {
-            if (transform.position.y <= cameraLimit)
+            if (GlobalVariables.collision == false)
             {
                 transform.Translate(Vector2.up * Time.deltaTime * GlobalVariables.speed * 2);
             }
         }
         if (Input.GetKey("s") || Input.GetKey("down"))
         {
-            if (transform.position.y >= cameraLimit * (-1))
+            if (GlobalVariables.collision == false)
             {
                 transform.Translate(Vector2.down * Time.deltaTime * GlobalVariables.speed * 2);
             }
