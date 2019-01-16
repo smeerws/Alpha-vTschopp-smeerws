@@ -12,14 +12,15 @@ public class CollisionDetection : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "BoundaryTop")
+        if (collision.gameObject.name == "Boundary top")
         {
             GlobalVariables.collisionTop = true;
             return;
         }
-        if (collision.gameObject.tag == "BoundaryBottom")
+        if (collision.gameObject.name == "Boundary bottom")
         {
             GlobalVariables.collisionBottom = true;
+            return;
         }
 
         SceneManager.LoadScene("EndScene", LoadSceneMode.Single);
@@ -27,8 +28,14 @@ public class CollisionDetection : MonoBehaviour {
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        GlobalVariables.collisionTop = false;
-        GlobalVariables.collisionBottom = false;
+        if (collision.gameObject.name == "Boundary top")
+        {
+            GlobalVariables.collisionTop = false;
+        }
+        if (collision.gameObject.name == "Boundary bottom")
+        {
+            GlobalVariables.collisionBottom = false;
+        }
     }
 
     // Update is called once per frame

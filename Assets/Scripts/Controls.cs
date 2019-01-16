@@ -16,14 +16,14 @@ public class Controls : MonoBehaviour {
 
         if (Input.GetKey("w") || Input.GetKey("up"))
         {
-            if (GlobalVariables.collision == false)
+            if (GlobalVariables.collisionTop == false)
             {
                 transform.Translate(Vector2.up * Time.deltaTime * GlobalVariables.speed * 2);
             }
         }
         if (Input.GetKey("s") || Input.GetKey("down"))
         {
-            if (GlobalVariables.collision == false)
+            if (GlobalVariables.collisionBottom == false)
             {
                 transform.Translate(Vector2.down * Time.deltaTime * GlobalVariables.speed * 2);
             }

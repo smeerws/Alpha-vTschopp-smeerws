@@ -9,6 +9,10 @@ public class Buttons : MonoBehaviour {
 	void Start ()
     {
         Debug.Log("'Buttons.cs' initialized.");
+
+        // Reset collision if player died while touching the boundary
+        GlobalVariables.collisionTop = false;
+        GlobalVariables.collisionBottom = false;
 	}
 
     // Button functionality
