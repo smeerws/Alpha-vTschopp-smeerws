@@ -1,17 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using System;
 
 public class RandomNumbers : MonoBehaviour {
 
+    public Text randomResult;
+
 	// Use this for initialization
 	void Start () {
-        RandomNumberGenerator1();
-        Debug.Log(RandomNumberGenerator2());
+        // RandomNumberGenerator1();
+        // Debug.Log(RandomNumberGenerator2());
 
-        RandomNumberGenerator3(123, 1, 5);
-        Debug.Log(RandomNumberGenerator4(123, 1, 5));
+        // RandomNumberGenerator3(123, 1, 5);
+        // Debug.Log(RandomNumberGenerator4(123, 1, 5));
+
+        randomResult.text = RandomNumberGenerator4(123, 1, 5).ToString();
     }
 
     public void RandomNumberGenerator1()
