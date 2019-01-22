@@ -25,8 +25,10 @@ public class Highscore : MonoBehaviour {
         int lastLineInt = ConvertTimeToInt(lastLine);
         int watchInt = ConvertTimeToInt(watch.text);
 
-        if(lastLineInt != watchInt)
+        if(watchInt > lastLineInt)
         {
+            Debug.Log("New highscore");
+
             StreamWriter writer = new StreamWriter(path, true);
             writer.WriteLine(watch.text);
             writer.Close();
@@ -35,7 +37,15 @@ public class Highscore : MonoBehaviour {
 
     public int ConvertTimeToInt(string time)
     {
-        string[] splittedString = time.Split("\n"[0]);
+        string[] splittedString = time.Split(":"[0]);
+
+        int m = int.Parse(splittedString[0]);
+        int s = int.Parse(splittedString[1]);
+        int ms = int.Parse(splittedString[2]);
+
+        int result = m * 600 + s * 100 + ms;
+
+        Debug.Log("Result of " + time + ": " + result + "ms");
         return result;
     }
 
