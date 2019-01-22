@@ -15,7 +15,7 @@ Alpha is a game developed with Unity and build for desktop and WebGL. Goal of th
 ## Development and target platforms
 * Unity 2018.2.14f1
 * Visual Studio for Mac 2017 v7.7.2
-* Build for desktop and WebGL
+* Build for desktop and WebGL Full HD
 
 ## Resources
 * [Orbitron (Font)](https://fonts.google.com/specimen/Orbitron)
