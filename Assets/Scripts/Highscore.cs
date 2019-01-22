@@ -2,27 +2,40 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using System.IO;
 
 public class Highscore : MonoBehaviour {
 
+    string path = "Assets/TextFiles/highscore.txt";
     private Text watch;
 
 	// Use this for initialization
 	void Start () {
+        Scene currentScene = SceneManager.GetActiveScene();
+        string sceneName = currentScene.name;
+
         watch = gameObject.GetComponent<Text>();
-	}
 
-    public void WriteHighscore()
+        if(sceneName == "EndScene")
+        {
+            watch.text = ReadHighscore();
+        }
+    }
+
+    public string ReadHighscore()
     {
-        string path = "Assets/TextFiles/highscore.txt";
-
         StreamReader reader = new StreamReader(path, true);
         string[] highscore = reader.ReadToEnd().Split("\n"[0]);
         string lastLine = highscore[highscore.Length - 2]; // Last line is empty, index starts at 0
         reader.Close();
 
-        int lastLineInt = ConvertTimeToInt(lastLine);
+        return lastLine;
+    }
+
+    public void WriteHighscore()
+    {
+        int lastLineInt = ConvertTimeToInt(ReadHighscore());
         int watchInt = ConvertTimeToInt(watch.text);
 
         if(watchInt > lastLineInt)
