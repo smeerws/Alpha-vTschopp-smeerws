@@ -19,6 +19,13 @@ public class Highscore : MonoBehaviour {
 
         if(sceneName == "EndScene")
         {
+            if(GlobalVariables.newHighscore == true)
+            {
+                watch.text = " " + ReadHighscore() + "*"; // Mark new highscore
+                GlobalVariables.newHighscore = false;
+
+                return;
+            }
             watch.text = ReadHighscore();
         }
     }
@@ -41,6 +48,7 @@ public class Highscore : MonoBehaviour {
         if(watchInt > lastLineInt)
         {
             Debug.Log("New highscore");
+            GlobalVariables.newHighscore = true;
 
             StreamWriter writer = new StreamWriter(path, true);
             writer.WriteLine(watch.text);
