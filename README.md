@@ -10,7 +10,7 @@
 You'll find the current release (v1.0.0-beta Build 2) under *release*.
 
 ## How to build from source?
-Just clone the git repo, jump into Unity (2018.2.14f1) and punch the build button.
+Just clone the repo, jump into Unity (2018.2.14f1) and punch the build button.
 
 # What is Alpha?
 Alpha is a game developed with Unity and build for desktop and WebGL. Goal of the game is to avoid collision with moving obstacles, entering the screen from right to left. Instead of controlling the character, the user moves the background up and down to avoid collisions.
