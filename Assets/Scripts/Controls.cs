@@ -5,14 +5,15 @@ using UnityEngine;
 public class Controls : MonoBehaviour {
 
     // Use this for initialization
-    void Start () {
-		
+    void Start ()
+    {
+        GlobalVariables.speed = 2f;
 	}
 	
 	// Update is called once per frame
 	void Update () 
     {
-        transform.Translate(Vector2.right * Time.deltaTime * GlobalVariables.speed);
+        transform.Translate(Vector2.right * Time.deltaTime * GlobalVariables.speed); // Side movement
 
         if (Input.GetKey("w") || Input.GetKey("up"))
         {

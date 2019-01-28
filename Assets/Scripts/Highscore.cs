@@ -11,7 +11,8 @@ public class Highscore : MonoBehaviour {
     private Text watch;
 
 	// Use this for initialization
-	void Start () {
+	void Start ()
+    {
         path = Path.Combine(Application.streamingAssetsPath, "TextFiles/highscore.txt");
         
         Scene currentScene = SceneManager.GetActiveScene();
@@ -62,7 +63,7 @@ public class Highscore : MonoBehaviour {
     {
         string[] splittedString = time.Split(":"[0]);
 
-        int m = int.Parse(splittedString[0]);
+        int m = int.Parse(splittedString[0]); // Keep variable name short
         int s = int.Parse(splittedString[1]);
         int ms = int.Parse(splittedString[2]);
 
@@ -73,7 +74,8 @@ public class Highscore : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update () {
+    void Update ()
+    {
 		
 	}
 }

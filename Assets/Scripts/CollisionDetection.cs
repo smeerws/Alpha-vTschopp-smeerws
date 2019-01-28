@@ -8,7 +8,8 @@ public class CollisionDetection : MonoBehaviour {
     public GameObject receiverTime;
 
 	// Use this for initialization
-	void Start () {
+	void Start ()
+    {
 		
 	}
 
@@ -42,7 +43,8 @@ public class CollisionDetection : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update () {
+    void Update ()
+    {
 
 	}
 }
