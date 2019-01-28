@@ -7,11 +7,13 @@ using System.IO;
 
 public class Highscore : MonoBehaviour {
 
-    private string path = Path.Combine(Application.streamingAssetsPath, "TextFiles/highscore.txt");
+    private string path;
     private Text watch;
 
 	// Use this for initialization
 	void Start () {
+        path = Path.Combine(Application.streamingAssetsPath, "TextFiles/highscore.txt");
+        
         Scene currentScene = SceneManager.GetActiveScene();
         string sceneName = currentScene.name;
 
