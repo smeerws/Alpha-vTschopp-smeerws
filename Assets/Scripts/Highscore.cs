@@ -7,7 +7,7 @@ using System.IO;
 
 public class Highscore : MonoBehaviour {
 
-    string path = "Assets/TextFiles/highscore.txt";
+    private string path = Path.Combine(Application.streamingAssetsPath, "TextFiles/highscore.txt");
     private Text watch;
 
 	// Use this for initialization
