@@ -497,6 +497,7 @@ GameObject:
   - component: {fileID: 939771071}
   - component: {fileID: 939771070}
   - component: {fileID: 939771072}
+  - component: {fileID: 939771073}
   m_Layer: 5
   m_Name: Watch
   m_TagString: Untagged
@@ -571,6 +572,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5e6b3db23aa364525a8609d3588d123c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &939771073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 939771068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0265c47d8252c4be09c01d9e10d6fc5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &955660418
@@ -721,6 +733,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca12b5675ecc54d96975fcae4f68cf14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  receiverTime: {fileID: 939771068}
 --- !u!50 &1029464381
 Rigidbody2D:
   serializedVersion: 4

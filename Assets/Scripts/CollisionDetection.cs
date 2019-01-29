@@ -5,8 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class CollisionDetection : MonoBehaviour {
 
+    public GameObject receiverTime;
+
 	// Use this for initialization
-	void Start () {
+	void Start ()
+    {
 		
 	}
 
@@ -14,7 +17,7 @@ public class CollisionDetection : MonoBehaviour {
     {
         if (collision.gameObject.name == "Boundary top")
         {
-            GlobalVariables.collisionTop = true;
+            GlobalVariables.collisionTop = true; // Cheap but will work
             return;
         }
         if (collision.gameObject.name == "Boundary bottom")
@@ -23,6 +26,7 @@ public class CollisionDetection : MonoBehaviour {
             return;
         }
 
+        receiverTime.SendMessage("WriteHighscore");
         SceneManager.LoadScene("EndScene", LoadSceneMode.Single);
     }
 
@@ -39,7 +43,8 @@ public class CollisionDetection : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update () {
+    void Update ()
+    {
 
 	}
 }

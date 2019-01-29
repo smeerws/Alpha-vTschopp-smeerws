@@ -17,7 +17,7 @@ public class BuildWorld : MonoBehaviour {
         CreateWorld(offsetCounter);
 	}
 
-    // Create world
+    // Create world - performance issues!
     void CreateWorld(int offset)
     {
         for (int i = 0; i < 20; i++)
@@ -31,11 +31,12 @@ public class BuildWorld : MonoBehaviour {
     {
         timer += Time.deltaTime;
 
-        if (timer > GlobalVariables.speed)
+        if (timer > Time.deltaTime * GlobalVariables.speed)
         {
             offsetCounter = offsetCounter + offsetDistance;
             CreateWorld(offsetCounter);
-            timer = timer - GlobalVariables.speed;
+
+            timer = 0;
         }
     }
 }

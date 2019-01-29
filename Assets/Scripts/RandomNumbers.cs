@@ -9,7 +9,8 @@ public class RandomNumbers : MonoBehaviour {
     public Text randomResult;
 
 	// Use this for initialization
-	void Start () {
+	void Start ()
+    {
         // RandomNumberGenerator1();
         // Debug.Log(RandomNumberGenerator2());
 
